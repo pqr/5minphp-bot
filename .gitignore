@@ -1,0 +1,4 @@
+vendor/
+tests/_output/
+.idea/
+src/phpfact.txt
