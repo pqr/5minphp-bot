@@ -1,0 +1,15 @@
+{
+  "name": "5minphp-bot",
+  "require-dev": {
+    "codeception/codeception": "@stable"
+  },
+
+  "scripts": {
+    "start": [
+      "php -S localhost:8080 -r src"
+    ],
+    "test": [
+      "php vendor/codeception/codeception/codecept run"
+    ]
+  }
+}
