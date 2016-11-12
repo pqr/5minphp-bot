@@ -1,10 +1,10 @@
 <?php
 
-class AboutCest {
+class InfoCest {
 
-    public function testAbout(\AcceptanceTester $I)
+    public function testInfo(\AcceptanceTester $I)
     {
-        $I->sendGET('/about');
+        $I->sendGET('/info');
         $I->seeResponseCodeIs(200);
         $I->seeResponseMatchesJsonType([
             'author' => 'string',
