@@ -11,7 +11,7 @@ Rollbar::init([
 ]);
 
 define('LOCAL_FILE', __DIR__ . '/phpfact.txt');
-define('REMOTE_FILE', 'https://raw.githubusercontent.com/pqr/5minphp-bot/master/phpfact.txt1');
+define('REMOTE_FILE', 'https://raw.githubusercontent.com/pqr/5minphp-bot/master/phpfact.txt');
 define('BOT_NAME', 'Пятиминутка PHP');
 
 if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] === '/info') {
