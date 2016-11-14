@@ -35,14 +35,14 @@ class Response201Cest {
     public function downloadNewFacts(\AcceptanceTester $I)
     {
         $msg = [
-            'text' => 'Пятиминутка обновись, пожалуйста',
+            'text' => 'Пятиминутка, обновись, пожалуйста',
             'username' => 'pqr',
             'display_name' => 'Пётр'
         ];
 
         $I->sendPOST('/event', json_encode($msg));
         $I->seeResponseCodeIs(201);
-        $I->seeResponseContainsJson(['text' => 'У меня для вас есть свежие факты про PHP...', 'bot' => 'Пятиминутка PHP']);
+        $I->seeResponseContainsJson(['text' => 'У меня для вас есть свежие факты про PHP. Просто напишите сообщение с текстом содержащим "PHP", и вы узнаете, что...', 'bot' => 'Пятиминутка PHP']);
     }
 
 }
