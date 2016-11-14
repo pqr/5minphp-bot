@@ -26,23 +26,5 @@ class Response417Cest {
         $I->seeResponseCodeIs(417);
     }
 
-    /**
-     * @example ["rt-bot", "rt-bot"]
-     * @example ["rt-bot", "Пятиминутка PHP"]
-     * @example ["Пятиминутка PHP", "rt-bot"]
-     * @example ["Пятиминутка PHP", "Пятиминутка PHP"]
-     */
-    public function selfMessage(\AcceptanceTester $I, \Codeception\Example $example)
-    {
-        $msg = [
-            'text' => 'какой-то текст содержащий php но от rt-bot',
-            'username' => $example[0],
-            'display_name' => $example[1]
-        ];
-
-        $I->sendPOST('/event', json_encode($msg));
-        $I->seeResponseCodeIs(417);
-    }
-
 }
 
