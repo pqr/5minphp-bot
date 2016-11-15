@@ -15,6 +15,9 @@ class Response201Cest {
      * @example ["какой-то текст содержащий в конце ПХП"]
      * @example ["ПХП идёт в начале"]
      * @example ["в середине текста ПХП есть"]
+     * @example ["php?"]
+     * @example ["php7"]
+     * @example ["php-подобный"]
      */
     public function wordPhp(\AcceptanceTester $I, \Codeception\Example $example)
     {

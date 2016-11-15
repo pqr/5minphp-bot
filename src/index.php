@@ -43,7 +43,7 @@ if (mb_stripos($inputData['text'], 'пятиминутка, обновись') !
     exit();
 }
 
-if (!hasWordPhp($inputData['text'])) {
+if (!preg_match('/\b(php\d*|пхп\d*)\b/iu', $inputData['text'])) {
     http_response_code(417);
     exit();
 }
@@ -57,19 +57,6 @@ if (!$fact) {
 
 http_response_code(201);
 print json_encode(['text' => $fact, 'bot' => BOT_NAME]);
-
-function hasWordPhp($inputText): bool
-{
-    $words = preg_split('/\s/', mb_strtolower($inputText, 'UTF-8'));
-    foreach ($words as $word) {
-        if ($word === 'php' || $word === 'пхп') {
-            return true;
-        }
-    }
-
-    return false;
-}
-
 
 function getRandomFact(string $inputData): string
 {
