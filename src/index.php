@@ -87,6 +87,6 @@ function downloadFacts()
 function sendResponseJson($code, $data)
 {
     http_response_code($code);
-    header('Content-Type: Content-Type: application/json;charset=UTF-8');
+    header('Content-Type: application/json;charset=UTF-8');
     print json_encode($data);
 }
